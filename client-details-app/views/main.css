@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    border:4px solid;
+    background-color: rgba(176, 194, 210, 0.573);
+}
+h1 {
+    color: black;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-color: black;
+    width: 70%;
+}
+
+input[type=text], [type=number]{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: solid;
+    border-radius:4px ;
+}
+
+input[type = submit]{
+    font-weight: bold;
+    width: 50%;
+    background-color: green;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+  }
+
+form{
+    background-color: rgb(170, 239, 216);
+    text-align: center;
+}
+
+#details{
+    padding: 20px;
+    
+}

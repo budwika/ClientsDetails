@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Client Details</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <h1>Add Client Details</h1>
+  <form action="/submit" method="post" enctype="multipart/form-data"> <!--submit form data using enctype multipart-->
+    <!--Reference __ "https://refine.dev/blog/how-to-multipart-upload/#what-is-multipart-upload-request"-->
+    
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="amount">Amount</label><br>
+    <input type="number" id="amount" name="amount" required><br>
+
+    <label for="image">Image: </label><br>
+    <!--only accept image file in file input 
+    Reference__"https://stackoverflow.com/questions/3828554/how-to-allow-input-type-file-to-accept-only-image-files"-->
+    <input type="file" id="image" name="image" accept="image/*" required><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="details">
+  <h2>Existing Clients</h2>
+  <!-- showing existing client data in the html file
+  Reference__https://stackoverflow.com/questions/38028613/display-images-stored-in-mongodb-in-html-file-->
+  <table>
+      <% clients.forEach(client => { %>
+        <tr>
+              <td>Name: <%= client.name %></td><td> Amount: <%= client.amount %></td>
+                <td><img src="../uploads/<%= client.image %>" alt="<%= client.name %>'s Image" style="max-width: 200px; max-height: 200px;"></td>
+        </tr>
+      <% }); %>
+  </table>
+  </div>
+</body>
+</html>
